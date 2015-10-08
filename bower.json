@@ -1,0 +1,22 @@
+{
+  "name": "todo-app",
+  "version": "0.0.0",
+  "homepage": "https://github.com/brock-rasmussen/todo-app",
+  "authors": [
+    "brock-rasmussen <rasmussen.brock@gmail.com>"
+  ],
+  "license": "MIT",
+	"private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "description": "Angular assignment 2 for DGM 3790.",
+  "keywords": [
+    "Angular",
+    "Bootstrap"
+  ]
+}

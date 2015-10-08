@@ -162,7 +162,7 @@ project. We're going to use the `--save-dev` flag to save these dependencies as
 devDependencies in our `package.json`.
 
 ```sh
-npm install --save-dev gulp gulp-sourcemaps gulp-uglify gulp-concat gulp-concat gulp-pleeease
+npm install --save-dev gulp gulp-sourcemaps gulp-uglify gulp-concat gulp-pleeease
 ```
 
 Now that we've got our dependencies, go ahead and create a `gulpfile.js` in your
