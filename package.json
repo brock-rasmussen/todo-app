@@ -18,8 +18,16 @@
   },
   "homepage": "https://github.com/brock-rasmussen/todo-app#readme",
   "devDependencies": {
+    "bower-files": "^3.11.3",
+    "eslint": "^1.7.3",
+    "express": "^4.13.3",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
+    "gulp-htmlmin": "^1.2.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-load-plugins": "^1.0.0",
+    "gulp-pleeease": "^2.0.1",
+    "gulp-plumber": "^1.0.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.4.1"
   }

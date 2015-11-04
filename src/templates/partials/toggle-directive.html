@@ -1,0 +1,6 @@
+<span class="input-group-btn">
+	<button class="btn btn-default" type="button" data-ng-class="{active: value}" data-ng-click="value = !value">
+		<span class="glyphicon glyphicon-{{ active }}" data-ng-if="value"></span>
+		<span class="glyphicon glyphicon-{{ inactive }}" data-ng-if="!value"></span>
+	</button>
+</span>
