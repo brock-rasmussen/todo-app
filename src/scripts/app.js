@@ -1,7 +1,8 @@
 angular
 	.module('todoApp', [
 		'ngRoute',
-		'LoginController'
+		'LoginController',
+		'TodosController'
 	])
 	.config([
 		'$routeProvider',
@@ -12,6 +13,11 @@ angular
 					templateUrl: '/partials/login-controller.html',
 					controller: 'LoginController',
 					controllerAs: 'login'
+				})
+				.when('/todos', {
+					templateUrl: '/partials/todos-controller.html',
+					controller: 'TodosController',
+					controllerAs: 'todo'
 				})
 				.otherwise('/login');
 		}]);
