@@ -12,7 +12,9 @@ angular
 			var login = this;
 			
 			auth.isLoggedIn().then(function (isLoggedIn) {
-				$location.url('/todos');
+				if (isLoggedIn) {
+					$location.url('/todos');
+				}
 			});
 			
 			login.inputType = 'signin';

@@ -1,3 +1,56 @@
 <div>
 	<h1>Todos</h1>
+	
+	<ul class="list-group">
+		<li class="list-group-item" ng-repeat="todoItem in todo.todos">
+			<div class="checkbox">
+				<label>
+					<input
+						type="checkbox"
+						ng-model="todoItem.completed"
+						ng-change="todo.updateTodo(todoItem)">
+					<span ng-class="{ strikethrough: todoItem.completed }">{{ todoItem.name }}</span>
+				</label>
+			</div>
+			<button
+				class="close"
+				type="button"
+				ng-click="todo.archiveTodo(todoItem)">×</button>
+		</li>
+	</ul>
+	
+	<form ng-submit="todo.createTodo(todo.create)">
+		<h3>Add Todo</h3>
+		<div class="alert alert-danger" ng-show="todo.errorMessage">
+			<p>{{ todo.errorMessage }}</p>
+		</div>
+		<div class="form-group">
+			<label for="name">Name</label>
+			<input
+				id="name"
+				name="name"
+				class="form-control"
+				type="text"
+				ng-model="todo.create.name">
+		</div>
+		<div class="form-group">
+			<label for="description">Description</label>
+			<textarea
+				id="description"
+				name="description"
+				class="form-control"
+				ng-model="todo.create.description"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="tags">Tags</label>
+			<input
+				id="tags"
+				name="tags"
+				class="form-control"
+				type="text"
+				ng-model="todo.create.tags">
+			<p>Separate tags with a comma</p>
+		</div>
+		<input type="submit" class="btn btn-primary btn-lg btn-block" value="Add Todo">
+	</form>
 </div>

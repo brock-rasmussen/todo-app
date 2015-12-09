@@ -19,7 +19,7 @@
 						class="form-control"
 						id="password"
 						name="password"
-						type="password"
+						type="{{ login.showPassword ? 'text' : 'password' }}"
 						data-ng-model="login.inputs.password"
 					>
 					<toggle value="login.showPassword" active="eye-open" inactive="eye-close"></toggle>

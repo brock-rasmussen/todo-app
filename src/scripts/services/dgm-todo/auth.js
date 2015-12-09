@@ -30,17 +30,17 @@ angular
 				
 				isLoggedIn: function () {
 					if (currentUser !== undefined) {
-						return $q.resolve(!!currentUser);
+						return $q.resolve(currentUser);
 					}
 					return $http
 						.get(host + '/session')
 						.then(function (res) {
 							currentUser = res.data;
-							return true;
+							return currentUser;
 						})
 						.catch(function (res) {
 							currentUser = null;
-							return false;
+							return currentUser;
 						});
 				}
 			};
